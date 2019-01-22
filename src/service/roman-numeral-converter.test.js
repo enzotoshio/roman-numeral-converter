@@ -48,4 +48,10 @@ describe('romanNumeralConverter', () => {
       expect(romanNumeralConverter(3)).toBe('III');
     });
   });
+
+  describe('when receiving a float number', () => {
+    it('parses the number to integer and returns the correct numeral', () => {
+      expect(romanNumeralConverter(3.5)).toBe('III');
+    });
+  });
 });
