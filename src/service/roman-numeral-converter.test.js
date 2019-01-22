@@ -3,25 +3,25 @@ const romanNumeralConverter = require('./roman-numerals-converter');
 describe('romanNumeralConverter', () => {
   describe('when not receiving a parameter', () => {
     it('returns an exception', () => {
-      expect(romanNumeralConverter()).toThrow();
+      expect(() => romanNumeralConverter()).toThrow();
     });
   });
 
   describe('when not receiving a number', () => {
     it('returns an exception', () => {
-      expect(romanNumeralConverter('test')).toThrow();
+      expect(() => romanNumeralConverter('test')).toThrow();
     });
   });
 
   describe('when receiving a number above 3.999.999', () => {
     it('returns an exception', () => {
-      expect(romanNumeralConverter(3999999)).toThrow();
+      expect(() => romanNumeralConverter(4000000)).toThrow();
     });
   });
 
   describe('when receiving a number below 0', () => {
     it('returns an exception', () => {
-      expect(romanNumeralConverter(0)).toThrow();
+      expect(() => romanNumeralConverter(0)).toThrow();
     });
   });
 
